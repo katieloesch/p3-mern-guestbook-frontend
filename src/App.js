@@ -4,6 +4,7 @@ import Homepage from './Components/Homepage/Homepage';
 import PageNotFound from './Components/PageNotFound/PageNotFound';
 import Users from './Components/Users/Users';
 import { getAllUsers } from './Components/Users/api';
+import { getAllPosts } from './Components/Posts/Postapi';
 import ShowUser from './Components/Users/ShowUser';
 import NewUserForm from './Components/Users/NewUserForm';
 import Posts from './Components/Posts/Posts'
@@ -40,6 +41,15 @@ const [idUpdate, setIdUpdate]=useState("")
       .then(results => results.json())
       .then(data => {
           setUsers(data)})
+
+      getAllPosts()
+        .then((data) => data.json())
+        .then((newPosts) => {
+          console.log('fetching posts...')
+          console.log(newPosts)
+          setPosts(newPosts)});
+      
+      
   
 
     let token = JSON.parse(localStorage.getItem('divorceJWT')) 
