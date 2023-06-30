@@ -1,6 +1,7 @@
 import React from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { getToAccountPage } from '../Users/api';
+import './NavBar.scss'
 
 export default function NavBar(props) {
   const navigate = useNavigate();
@@ -31,17 +32,18 @@ export default function NavBar(props) {
   }
 
 
-  return (
-        <ul className='font-semibold hidden md:flex items-center text-center justify-center mb-2'>
-            <li className='p-4  hover:text-pink'><Link to='/'>Home</Link></li>
-            <li className='p-4  hover:text-pink'><Link to='/posts'>Posts</Link></li>
-            <li className='p-4  hover:text-pink'><Link to='/users'>Users</Link></li>
-            <li className='p-4  hover:text-pink hover:cursor-pointer' onClick={gotToAccount}>Account</li>
-            {!props.tokenInLocalStorage && <li className='p-4  hover:text-pink'><Link to='/users/create'>Sign Up</Link></li>}
-            {!props.tokenInLocalStorage && <li className='p-4  hover:text-pink'><Link to='/users/login'>Log In</Link></li>}
-            {props.tokenInLocalStorage && <li className='p-4  hover:text-pink hover:cursor-pointer' onClick={logUserOut}>Log Out</li>}
+  return (<div className='nav-bar'>
+            <ul className='nav-list'>
+                <li className='nav-item'><Link to='/'>Home</Link></li>
+                <li className='nav-item'><Link to='/posts'>Posts</Link></li>
+                <li className='nav-item'><Link to='/users'>Users</Link></li>
+                {props.tokenInLocalStorage && <li className='nav-item' onClick={gotToAccount}>Account</li>}
+                {!props.tokenInLocalStorage && <li className='nav-item'><Link to='/users/create'>Sign Up</Link></li>}
+                {!props.tokenInLocalStorage && <li className='nav-item'><Link to='/users/login'>Log In</Link></li>}
+                {props.tokenInLocalStorage && <li className='nav-item' onClick={logUserOut}>Log Out</li>}
 
-        </ul>
+            </ul>
+        </div>
 
         
   )

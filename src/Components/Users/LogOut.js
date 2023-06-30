@@ -1,10 +1,10 @@
 import React from 'react'
+import './LogOut.scss'
 
 export default function LogOut() {
   return (
-    <div>
-      <br />
-        <h1 className="font-bold">You have successfully logged out!</h1>
+    <div className='logout-page nav-section'>
+        <h1>You have successfully logged out!</h1>
     </div>
   )
 }

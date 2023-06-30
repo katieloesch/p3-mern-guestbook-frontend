@@ -25,7 +25,7 @@ export default function User(props) {
   }
   
   return (
-        <div className='hover:cursor-pointer' onClick={handleClick}>
+        <div className='user hover:cursor-pointer' onClick={handleClick}>
           <h2>{props.name}</h2>
         </div>
   )

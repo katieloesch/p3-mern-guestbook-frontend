@@ -6,12 +6,52 @@
 @import url('https://fonts.googleapis.com/css2?family=Allura&family=Architects+Daughter&family=Great+Vibes&family=Lobster&family=Merriweather+Sans&family=Nunito+Sans:ital@1&display=swap');
 
 
-body {
-  display: flex;
-  text-align: center;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-  width: 100%;
-  background-color: #F1EAE0;
+
+
+:root {
+  --pink: #A92239;
+  --lightpurple: #8E87B3;
+  --offwhite:  #f4eae9;
+  --darkpurple: #252330;
+
+  --font-editorial: 'Allura';
+  --font-text: 'Merriweather Sans';
+
+}
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  scroll-behavior: smooth;
+  font-family: var(--font-text);
+}
+
+
+ul, li {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+}
+
+input,
+textarea,
+button,
+a,
+p,
+div {
+  font-family: var(--font-text);
+}
+
+input,
+textarea {
+  border: 2px solid var(--offwhite);
+  outline: none;
+}
+
+input:focus,
+textarea:focus {
+  border: 2px solid var(--lightpurple);
+
 }

@@ -2,6 +2,8 @@ import React, { useEffect, useState } from 'react'
 import { useNavigate, useParams } from "react-router-dom";
 import { getAllUsers, getOneUser, getToAccountPage, updateOneUser } from './api';
 
+import './UserUpdatePassword.scss'
+
 export default function UserUpdatePassword(props) {
   const bcrypt = require('bcryptjs');
   const navigate = useNavigate();
@@ -52,7 +54,7 @@ export default function UserUpdatePassword(props) {
             const hashedNewPw = bcrypt.hashSync(formData.new1, salt)
             let updatedUser = {...user}
             updatedUser.password = hashedNewPw
-            const data = await updateOneUser(updatedUser, params.id)
+            await updateOneUser(updatedUser, params.id)
 
             if (updatedUser.error) {
                   alert("Server Error, password could not be updated!")
@@ -79,19 +81,18 @@ export default function UserUpdatePassword(props) {
     }
   }
     return (
-      <div className='h-100'>
-        <br />
+      <div className='nav-section update-password-page'>
+    
           <form onSubmit={handleFormSubmit}>
-              <h1 className='text-2xl font-bold pb-8'>Change Your Password</h1>
-              <ul className='flex flex-col'>
-                  <li className='py-1 font-bold'><label>Old Password:</label></li>
-                  <li className='py-2'><input type='password' className='px-2 py-1' value={formData.old} name='old' required onChange={handleFormChange}></input></li>
-                  <li className='py-1 font-bold'><label>New Password:</label></li>
-                  <li className='py-2'><input type='password' className='px-2 py-1' value={formData.new1} name='new1' required onChange={handleFormChange}></input></li>
-                  <li className='py-1 font-bold'><label>Confirm New Password:</label></li>
-                  <li className='py-2'><input type='password' className='px-2 py-1' value={formData.new2} name='new2' required onChange={handleFormChange}></input></li>
-                  <li className='py-2'><button className="font-bold hover:text-pink" type="submit">Submit</button></li>
-                  <li className='py-2'> <button className="font-bold hover:text-pink" type="button" onClick={handleCancel}>Cancel</button></li>
+              <h1 className='update-password-title'>Change Your Password</h1>
+              <ul>
+                  <li><h3>Old Password</h3></li>
+                  <li><input type='password' value={formData.old} name='old' required onChange={handleFormChange}></input></li>
+                  <li><h3>New Password</h3></li>
+                  <li><input type='password' value={formData.new1} name='new1' required onChange={handleFormChange}></input></li>
+                  <li><h3>Confirm New Password</h3></li>
+                  <li><input type='password' value={formData.new2} name='new2' required onChange={handleFormChange}></input></li>
+                  <li className='btns-update-password'><button type="button" onClick={handleCancel}>Cancel</button><button type="submit">Submit</button></li>
               </ul> 
           </form>
       </div>

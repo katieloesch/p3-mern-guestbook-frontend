@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { getOneUser, updateOneUserPost } from './api'
 import { useNavigate, useParams } from 'react-router-dom'
 import { getOneUserPost } from './api';
+import './UserUpdatePostForm.scss'
 
 export default function UserUpdatePostForm() {
     const navigate = useNavigate();
@@ -32,29 +33,31 @@ export default function UserUpdatePostForm() {
     }
 
   return (
-    <div>
-        <h1>Edit Post</h1>
-        <form onSubmit={(e) => handleUpdatePost(e)} className='flex flex-col gap-5'>
+    <div className='nav-section edit-post-page'>
+        
+        <form onSubmit={(e) => handleUpdatePost(e)}>
+        <h1 className='edit-post-heading'>Edit Post</h1>
             <ul>
-                <li><label>Title:
+                <li><h3>Title</h3></li>
+                <li>
                     <input
                         name="title"
                         onChange={handleUpdateFormChange}
                         value={updateFormData.title}
                     ></input>
-                </label></li>
+               </li>
                 
-                <li><label>Content:
+                <li><h3>Content</h3></li>
+                <li>
                     <textarea
                     name="content"
                     onChange={handleUpdateFormChange}
                     value={updateFormData.content}
                     required
                     ></textarea>
-                </label></li>
+                </li>
         
-                <li className='py-2'> <button type="button" onClick={() => navigate(`/users/${params.id}/account`)}>Cancel</button></li>
-                <li className='py-2'><button type="submit">Save Changes</button></li>
+                <li className='btns-edit-post'><button type="button" onClick={() => navigate(`/users/${params.id}/account`)}>Cancel</button><button type="submit">Save Changes</button></li>
             </ul>
         </form>
     </div>

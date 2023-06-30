@@ -1,0 +1,45 @@
+.show-user {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+
+    .show-user-name{
+        color: var(--pink);
+        font-weight: bold;
+        font-size: 1.2rem;
+    }
+
+    .show-user-username {
+        color: var(--pink);
+        font-size: 1.1rem;
+
+    }
+
+    .show-user-posts-section {
+        width: 75%;
+
+        .show-user-posts-title {
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-align: center;
+            margin: 1.5rem;
+            color: var(--lightpurple);
+        }
+
+        .show-user-posts {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            gap: 1.5rem;
+            width: 100%;
+
+            
+        }
+
+        a {
+            width: 100%;
+        }
+    }
+}

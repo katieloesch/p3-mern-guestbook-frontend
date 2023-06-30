@@ -1,6 +1,7 @@
 import { useNavigate, useParams } from 'react-router-dom'
 import React from 'react'
 import { deleteOneUser, getAllUsers, getToAccountPage } from './api';
+import './UserDeleteAccount.scss'
 
 export default function UserDeleteAccount(props) {
     const params = useParams()
@@ -35,12 +36,11 @@ export default function UserDeleteAccount(props) {
         }
 
   return (
-    <div>
-        <br />
+    <div className='nav-section delete-account-page'>
         <ul>
-            <li className='py-2 font-bold'>  <h1> Are you sure you want to delete your account??</h1></li>
-            <li className='py-2 font-bold '> <button type="button" onClick={handleDelete} className='text-lightpurple  hover:text-pink'>Yes, delete my account</button></li>
-            <li className='py-2 font-bold '> <button type="button" onClick={handleCancel} className='text-lightpurple hover:text-pink'>Cancel</button></li>
+            <li> <h1 className='delete-account-title'> Are you sure you want to delete your account??</h1></li>
+            <li> <button className='btn-delete-account' type="button" onClick={handleDelete}>Yes, delete my account</button></li>
+            <li> <button className='btn-delete-account' type="button" onClick={handleCancel}>Cancel</button></li>
         </ul> 
     </div>
   )

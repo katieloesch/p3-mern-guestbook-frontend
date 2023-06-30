@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { getOneUser } from './api'
+import './ShowUser.scss'
 
 
 export default function ShowUser() {
@@ -19,11 +20,14 @@ export default function ShowUser() {
    
     if (user.posts) {
       display = user.posts.map((post) => {
-        return <Link to={`/users/${user._id}/posts/${post._id}`} className='flex flex-col py-5 px-10 text-center items-center' key={post._id}>
-                    <h2 className='block font-bold text-lg'>{post.title}</h2>
-                    <p className='text-justify'>{post.content}</p>
-                    <p>Entry ID: {post._id}</p>
-                </Link>
+        return <Link to={`/users/${user._id}/posts/${post._id}`} key={post._id}>
+                <div className="post">
+                  <div className="post-container">
+                    <h3 className="">{post.title}</h3>
+                    <p className="">{post.content}</p>
+                  </div>
+                </div>
+              </Link>
     })
 
     } else {
@@ -32,13 +36,12 @@ export default function ShowUser() {
     
 
   return (
-    <div className='px-10 pb-5 pt-4 h-100'>
-        <h2 className='text-2x font-bold'>{user.name}</h2>
-        <br/>
-        <h2 className='text-xl pb-5 font-bold'>{user.username}</h2>
-        <div>
-            <Link to={`/users/${params.id}/posts`} className='text-2xl font-bold'>Posts:</Link>
-            {display}
+    <div className='show-user nav-section'>
+        <h2 className='show-user-name'>{user.name}</h2>
+        <h3 className='show-user-username'>{user.username}</h3>
+        <div className='show-user-posts-section'>
+            <Link to={`/users/${params.id}/posts`}><h3 className='show-user-posts-title'>Posts:</h3></Link>
+            <div className="show-user-posts">{display}</div>
         </div>
     </div>
   )

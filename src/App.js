@@ -22,6 +22,9 @@ import UserPasswordUpdated from './Components/Users/UserPasswordUpdated';
 import LogOut from './Components/Users/LogOut';
 import UserUpdatePostForm from './Components/Users/UserUpdatePostForm';
 
+import './App.scss';
+import CreatePostForm from './Components/Users/CreatePostForm';
+
 function App() {
 const [users, setUsers] = useState([])
 const [tokenInLocalStorage, setTokenInLocalStorage] = useState(false)
@@ -66,12 +69,9 @@ const [idUpdate, setIdUpdate]=useState("")
   // }
   
   return (
-    <div className='bg-white text-darkpurple font-merriweather'>
-  {/*<div className={darkMode ? "dark" : "bg-white text-darkpurple font-merriweather"} >*/}
-    <Header tokenInLocalStorage={tokenInLocalStorage} setTokenInLocalStorage={setTokenInLocalStorage}/>
-<br />
-<br />
-      <div className='w-screen h-screen pt-40 text-black dark:lightpurple dark:text-white text-center'>
+    <div className='app'>
+      <Header tokenInLocalStorage={tokenInLocalStorage} setTokenInLocalStorage={setTokenInLocalStorage}/>
+
       <Routes>
 
         {/*** HOME ***/}
@@ -98,6 +98,7 @@ const [idUpdate, setIdUpdate]=useState("")
             <Route path='/users/:id/account/update' element={<UserUpdateAccount setUsers={setUsers}/>}></Route>
             <Route path='/users/:id/account/update/password' element={<UserUpdatePassword setUsers={setUsers}/>}></Route>
             <Route path='/users/:id/account/update/password/success' element={<UserPasswordUpdated setUsers={setUsers}/>}></Route>
+            <Route path='/users/:id/posts/create' element={<CreatePostForm />}></Route>
             <Route path='/users/:id/posts/:postId/update' element={<UserUpdatePostForm />}></Route>
 
           
@@ -121,11 +122,6 @@ const [idUpdate, setIdUpdate]=useState("")
 
         <Route path='*' element={<PageNotFound />}></Route>
       </Routes>
-      
-        {/*<Footer handleDarkMode={handleDarkMode}/>*/}
-
-    </div>
-    {/*</div>*/}
   </div>
   );
 }

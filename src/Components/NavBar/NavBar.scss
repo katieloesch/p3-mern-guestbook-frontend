@@ -1,0 +1,33 @@
+.nav-bar {
+
+}
+
+.nav-list {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 3rem;
+
+    .nav-item {
+
+        @media screen and (max-width: 570px) {
+         
+            display: none;
+        }
+
+        font-size: 1.05rem;
+
+
+
+   
+    }
+    .nav-item:hover {
+        cursor: pointer;
+        color: var(--pink);
+        a {
+            color: var(--pink);
+        }
+    }
+
+
+}

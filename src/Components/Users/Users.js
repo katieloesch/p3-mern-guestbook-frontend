@@ -1,5 +1,6 @@
 import React from 'react'
 import User from './User'
+import './Users.scss'
 
 export default function Users(props) {
 
@@ -22,11 +23,9 @@ export default function Users(props) {
   }
 
   return (
-    <div>
-      <br />
-        <h1 className='font-bold text-2xl pb-4'>Users</h1>
-        {allUsers}
-        <br />
+    <div className='users nav-section'>
+        <h1>Users</h1>
+        <div className='users-section'>{allUsers}</div>
     </div>
   )
 }

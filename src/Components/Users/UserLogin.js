@@ -2,6 +2,7 @@ import React from 'react'
 import { useState } from 'react';
 import { findOnLogIn } from './api';
 import { Link, useNavigate } from "react-router-dom";
+import './UserLogin.scss'
 
 export default function UserLogin(props) {
   const navigate = useNavigate();
@@ -45,19 +46,14 @@ async function handleFormSubmit(e) {
 
 
   return (
-    <div className='h-100'>
+    <div className='login nav-section'>
         <form onSubmit={handleFormSubmit}>
-          <br />
-            <h1 className='text-2xl font-bold pb-8'>Log In</h1>
-            <ul className='flex flex-col'>
-                <li className='py-1 font-bold'><label>Username:</label></li>
-                <li className='py-2'><input className='px-2 py-1' name='username' required onChange={handleFormChange}></input></li>
-                <li className='py-1 font-bold'><label>Password:</label></li>
-                <li className='py-2'><input className='px-2 py-1' name='password' required type='password' onChange={handleFormChange}></input></li>
-                <li className='py-2'><button type="submit" className='text-lightpurple hover:text-pink font-bold'>Log In</button></li>
-                <li className='py-2'> <button type="button" onClick={handleCancel} className='font-bold hover:text-pink text-lightpurple'>Cancel</button></li>
-                <li className='flex justify-center gap-4'><span>Don't have an account? </span><Link to='/users/create' className='font-bold hover:text-pink text-lightpurple'> Sign Up </Link> </li>
-                
+            <h1>Log In</h1>
+            <ul>
+                <li><input name='username' required onChange={handleFormChange} placeholder='username'></input></li>
+                <li><input name='password' required type='password' onChange={handleFormChange} placeholder='password'></input></li>
+                <li className='btns-login'><button type="submit">Log In</button><button type="button" onClick={handleCancel}>Cancel</button></li>
+                <li className='btn-redirect-signup'><span>Don't have an account? </span><Link to='/users/create'> Sign Up </Link> </li>
             </ul> 
         </form>
     </div>

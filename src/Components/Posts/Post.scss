@@ -1,0 +1,13 @@
+.post {
+    border: 3px solid var(--lightpurple);
+    border-radius: 10px;
+    padding: 15px;
+    width: 100%;
+
+    .post-container {
+        h3 {
+            font-weight: 900;
+            color: var(--lightpurple);
+        }
+    }
+}
