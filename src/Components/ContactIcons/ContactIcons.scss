@@ -1,0 +1,74 @@
+.contact-icons {
+    padding-top: 30px;
+    padding-bottom: 10px;
+    padding-left: 10px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-start;
+    flex-direction: row;
+    gap: 5px;
+    flex-direction: column;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+
+
+    @media screen and (max-width: 450px) {
+        top: 60%;
+    }
+    @media screen and (max-width: 400px) {
+        top: 65%;
+    }
+
+      
+    .contact-icon {
+      width: 30px;
+      height: 30px;
+      border-radius: 50%;
+      border: 1px solid var(--gray-a);
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      align-items: center;
+      transition: all 0.3s ease-in-out;
+     
+
+      svg {
+        width: 20px;
+        height: 20px;
+        padding-top: 3px;
+        color: var(--gray-a);
+        transition: all 0.3s ease-in-out;
+
+      }
+
+      .contact-icon-mail {
+        svg {
+            scale: 1.2;
+            
+        }
+      }
+
+
+      &:hover {
+        border: 1px solid var(--gray);
+      
+        svg { 
+          color: var(--gray);
+        }
+
+      }
+
+      @media screen and (min-width: 2000px) {
+        width: 70px;
+        height: 70px;
+
+        margin: 0.5rem 0;
+
+        svg {
+          width: 30px;
+          height: 30px;
+        }
+      }
+    }
+}

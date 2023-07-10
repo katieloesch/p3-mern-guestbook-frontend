@@ -64,8 +64,10 @@ Additional packages:
   - styling: TailwindCSS (v3.3.2)
     - https://tailwindcss.com/docs/guides/create-react-app
   - icons
-    - all icons used are Scalable Vector Graphics from iconify
-    - https://iconify.design/
+    - iconify
+      - https://iconify.design/
+    - react-icons
+      - https://www.npmjs.com/package/react-icons
 
 ### Back End
 

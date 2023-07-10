@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react'
-import { getOneUser, updateOneUserPost } from './api'
+import { updateOneUserPost } from './api'
 import { useNavigate, useParams } from 'react-router-dom'
 import { getOneUserPost } from './api';
 import './UserUpdatePostForm.scss'

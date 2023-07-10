@@ -1,5 +1,5 @@
 import React from "react";
-import { useState, useEffect } from "react";
+import { useEffect } from "react";
 import Post from "./Post";
 import { getAllPosts } from "./Postapi";
 
@@ -12,7 +12,7 @@ export default function Posts(props) {
     getAllPosts()
       .then((data) => data.json())
       .then((newPosts) => props.setPosts(newPosts));
-  }, []);
+  }, [props]);
 
   let allPosts = <h3>Loading...</h3>;
 

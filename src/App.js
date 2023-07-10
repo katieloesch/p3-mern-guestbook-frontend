@@ -21,9 +21,10 @@ import UserUpdatePassword from './Components/Users/UserUpdatePassword';
 import UserPasswordUpdated from './Components/Users/UserPasswordUpdated';
 import LogOut from './Components/Users/LogOut';
 import UserUpdatePostForm from './Components/Users/UserUpdatePostForm';
+import ContactIcons from './Components/ContactIcons/ContactIcons'
+import CreatePostForm from './Components/Users/CreatePostForm';
 
 import './App.scss';
-import CreatePostForm from './Components/Users/CreatePostForm';
 
 function App() {
 const [users, setUsers] = useState([])
@@ -71,7 +72,7 @@ const [idUpdate, setIdUpdate]=useState("")
   return (
     <div className='app'>
       <Header tokenInLocalStorage={tokenInLocalStorage} setTokenInLocalStorage={setTokenInLocalStorage}/>
-
+      <ContactIcons />
       <Routes>
 
         {/*** HOME ***/}
@@ -122,6 +123,7 @@ const [idUpdate, setIdUpdate]=useState("")
 
         <Route path='*' element={<PageNotFound />}></Route>
       </Routes>
+    
   </div>
   );
 }

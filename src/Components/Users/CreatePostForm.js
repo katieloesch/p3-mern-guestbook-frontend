@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react'
-import { Link, useNavigate, useParams } from 'react-router-dom'
+import { useNavigate, useParams } from 'react-router-dom'
 import './CreatePostForm.scss'
-import { createNewUserPost, deleteOneUserPost, getOneUser, getToDeleteAccountPage, getToUpdateAccountPage, getToUpdatePasswordPage } from './api'
+import { createNewUserPost, getOneUser } from './api'
 
 const CreatePostForm = () => {
     const navigate = useNavigate();
