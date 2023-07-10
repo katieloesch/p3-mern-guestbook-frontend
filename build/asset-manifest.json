@@ -1,14 +1,14 @@
 {
   "files": {
-    "main.css": "mern-guestbook.katieloesch.co.uk/static/css/main.f385e3ab.css",
-    "main.js": "mern-guestbook.katieloesch.co.uk/static/js/main.c2560092.js",
-    "static/media/home_bg.jpg": "mern-guestbook.katieloesch.co.uk/static/media/home_bg.389ce54f4b4bf6816762.jpg",
-    "index.html": "mern-guestbook.katieloesch.co.uk/index.html",
-    "main.f385e3ab.css.map": "mern-guestbook.katieloesch.co.uk/static/css/main.f385e3ab.css.map",
-    "main.c2560092.js.map": "mern-guestbook.katieloesch.co.uk/static/js/main.c2560092.js.map"
+    "main.css": "./static/css/main.ea37596e.css",
+    "main.js": "./static/js/main.5c7966b5.js",
+    "static/media/home_bg.jpg": "./static/media/home_bg.389ce54f4b4bf6816762.jpg",
+    "index.html": "./index.html",
+    "main.ea37596e.css.map": "./static/css/main.ea37596e.css.map",
+    "main.5c7966b5.js.map": "./static/js/main.5c7966b5.js.map"
   },
   "entrypoints": [
-    "static/css/main.f385e3ab.css",
-    "static/js/main.c2560092.js"
+    "static/css/main.ea37596e.css",
+    "static/js/main.5c7966b5.js"
   ]
 }

@@ -42,12 +42,7 @@
 
       }
 
-      .contact-icon-mail {
-        svg {
-            scale: 1.2;
-            
-        }
-      }
+  
 
 
       &:hover {
@@ -71,4 +66,32 @@
         }
       }
     }
+
+    .contact-icon-code, .contact-icon-github, .contact-icon-mail, .contact-icon-portfolio   {
+      svg {
+         margin-bottom: 3px;
+          
+      }
+    }
+    .contact-icon-linkedin {
+      svg {
+         margin-bottom: 2px;
+          
+      }
+    }
+
+
+    .contact-icon-mail, .contact-icon-portfolio {
+      svg {
+          scale: 1.15;
+          
+      }
+    }
+    .contact-icon-github, .contact-icon-code {
+      svg {
+          scale: 1.1;
+          
+      }
+    }
+    
 }
