@@ -24,10 +24,6 @@ export default function Header(props) {
     <div className='header'>
         <h1>Divorce Party Guest Book</h1>
         <NavBar tokenInLocalStorage={props.tokenInLocalStorage} setTokenInLocalStorage={props.setTokenInLocalStorage}/>
-        <div className='hamburger'> 
-            {icons.hamburger}
-        </div>
-        <NavBarSmallScreen showMenu={showMenu} hamburger={hamburger} close={icons.close} tokenInLocalStorage={props.tokenInLocalStorage} setTokenInLocalStorage={props.setTokenInLocalStorage}/>
     </div>
   )
 }

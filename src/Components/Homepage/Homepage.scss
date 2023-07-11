@@ -1,6 +1,10 @@
 .home {
     height: 100vh;
     width: 100vw;
+    background: url('./../../assets/images/broken_hearts.jpg');
+    background-size: 20.2%;
+    background-position-y: 100%;
+    background-position-x: 50% ;
     background-color: var(--darkpurple);
 
 
@@ -9,7 +13,7 @@
         width: 100%;
         img {
             position: absolute;
-            width: 75%;
+            width: 60%;
           
             top: 560px;
             left: 50%;
