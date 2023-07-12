@@ -73,6 +73,7 @@ const [idUpdate, setIdUpdate]=useState("")
     <div className='app'>
       <Header tokenInLocalStorage={tokenInLocalStorage} setTokenInLocalStorage={setTokenInLocalStorage}/>
       <ContactIcons />
+      <div className='app-container'>
       <Routes>
 
         {/*** HOME ***/}
@@ -123,6 +124,7 @@ const [idUpdate, setIdUpdate]=useState("")
 
         <Route path='*' element={<PageNotFound />}></Route>
       </Routes>
+      </div>
     
   </div>
   );

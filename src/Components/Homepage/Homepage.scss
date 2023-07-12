@@ -2,76 +2,71 @@
     height: 100vh;
     width: 100vw;
     background: url('./../../assets/images/broken_hearts.jpg');
-    background-size: 20.2%;
-    background-position-y: 100%;
+    background-size: 28.4%;
+    background-position-y: 102%;
     background-position-x: 50% ;
     background-color: var(--darkpurple);
-
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    @media screen and (max-width: 1650px) {
+        background-position-y: 98%;
+        background-size: 52%;
+    }
+    @media screen and (max-width: 1050px) {
+        background-position-y: 98%;
+        background-size: 60%;
+    }
+    @media screen and (max-width: 1000px) {
+        background-position-y: 98%;
+    }
+    @media screen and (max-width: 800px) {
+        background-size: 60%;
+        background-position-y: 90%;
+    }
+    @media screen and (max-width: 500px) {
+        background-size: 60%;
+        background-position-y: 105%;
+    }
+    @media screen and (max-width: 400px) {
+        background-size: 60%;
+        background-position-y: 99%;
+    }
 
     .home-img {
-        position: relative;
         width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+
+        @media screen and (max-width: 1050px) {
+            margin-top: -30rem;
+        }
+        @media screen and (max-width: 1000px) {
+            margin-top: -13rem;
+        }
+        @media screen and (max-width: 800px) {
+            margin-top: -13rem;
+        }
+        @media screen and (max-width: 700px) {
+            margin-top: 0rem;
+        }
+
         img {
-            position: absolute;
             width: 60%;
-          
-            top: 560px;
-            left: 50%;
-            transform: translate(-50%, -50%);
-          
-            margin-left: auto; 
-            margin-right: auto; 
-            border-radius: 5%;
-
+            border-radius: 15px;
             box-shadow: 0 0 10px black;
-
-           
       
-            @media screen and (max-width: 1500px) {
-                top: 470px;
-            }
             @media screen and (max-width: 1250px) {
-                width: 95%;
-                top: 490px;
+                width: 75%;   
             }
-            @media screen and (max-width: 1150px) {
-                top: 480px;
-            }
-            @media screen and (max-width: 1075px) {
-                top: 460px;
-            }
-            @media screen and (max-width: 1000px) {
-                top: 450px;
-            }
-            @media screen and (max-width: 950px) {
-                top: 430px;
-            }
-            @media screen and (max-width: 850px) {
-                top: 410px;
-            }
-            @media screen and (max-width: 750px) {
-                top: 380px;
-            }
-            @media screen and (max-width: 680px) {
-                top: 360px;
+            @media screen and (max-width: 800px) {
+                width: 80%;
             }
             @media screen and (max-width: 600px) {
-                top: 410px;
+                width: 90%;
             }
-            @media screen and (max-width: 520px) {
-                top: 385px;
-            }
-            @media screen and (max-width: 475px) {
-                top: 360px;
-            }
-            @media screen and (max-width: 410px) {
-                top: 340px;
-            }
-            @media screen and (max-width: 300px) {
-                top: 320px;
-            }
-           
-          
         }
     }
 }

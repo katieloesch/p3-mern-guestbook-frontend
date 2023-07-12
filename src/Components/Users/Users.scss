@@ -1,4 +1,6 @@
 .users {
+
+    height: 100%;
     
     h1 {
         font-size: 1.2rem;
@@ -36,6 +38,10 @@
         justify-content: center;
         padding-bottom: 50px;
 
+        @media screen and (max-width: 1050px) {
+            padding-bottom: 500px;
+        
+        }
         @media screen and (max-width: 800px) {
             padding-bottom: 450px;
         

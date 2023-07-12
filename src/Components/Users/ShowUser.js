@@ -20,14 +20,14 @@ export default function ShowUser() {
    
     if (user.posts) {
       display = user.posts.map((post) => {
-        return <Link to={`/users/${user._id}/posts/${post._id}`} key={post._id}>
+        return(
                 <div className="post">
                   <div className="post-container">
                     <h3 className="">{post.title}</h3>
                     <p className="">{post.content}</p>
                   </div>
-                </div>
-              </Link>
+                </div>)
+              
     })
 
     } else {

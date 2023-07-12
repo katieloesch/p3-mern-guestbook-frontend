@@ -1,8 +1,9 @@
 .posts {
-    padding-top: 15%;
+    padding-top: 8%;
     display: flex;
     align-items: center;
     justify-content: center;
+    background-color: var(--offwhite);
 
     .posts-container {
         display: flex;
@@ -17,27 +18,47 @@
             color: var(--pink);
         }
 
-        @media screen and (max-width: 1150px) {
-            margin-top: 2rem;
-        }
-        @media screen and (max-width: 990px) {
-            margin-top: 3rem;
-        }
-        @media screen and (max-width: 850px) {
-            margin-top: 4rem;
-        }
-        @media screen and (max-width: 750px) {
-            margin-top: 5rem;
-        }
-        @media screen and (max-width: 600px) {
-            margin-top: 12rem;
-        }
+   
+        // @media screen and (max-width: 990px) {
+        //     margin-top: 3rem;
+        // }
+        // @media screen and (max-width: 850px) {
+        //     margin-top: 4rem;
+        // }
+        // @media screen and (max-width: 750px) {
+        //     margin-top: 5rem;
+        // }
+        // @media screen and (max-width: 600px) {
+        //     margin-top: 12rem;
+        // }
+    }
+
+    @media screen and (max-width: 1000px) {
+        padding-top: 12%;
     }
 
     @media screen and (max-width: 800px) {
+        padding-top: 25%;
         padding-bottom: 450px;
     }
-
+    @media screen and (max-width: 700px) {
+        padding-top: 15%;
+    }
+    @media screen and (max-width: 600px) {
+        padding-top: 45%;
+    }
+    @media screen and (max-width: 570px) {
+        padding-top: 50%;
+    }
+    @media screen and (max-width: 450px) {
+        padding-top: 55%;
+    }
+    @media screen and (max-width: 350px) {
+        padding-top: 60%;
+    }
+    @media screen and (max-width: 310px) {
+        padding-top: 65%;
+    }
     @media screen and (max-width: 400px) {
         padding-bottom: 150px;
     }

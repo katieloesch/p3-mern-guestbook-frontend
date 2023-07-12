@@ -25,11 +25,13 @@ Users can also read, post, edit and delete comments in the Guestbook application
 
 ## <a name="deployment-link"></a> 2. Deployment link
 
-frontend:
-https://hpramanathan.github.io/project3-mernstack-app/
+- frontend deployment:
+  https://mern-guestbook.katieloesch.co.uk/
 
-backend heroku:
-https://mern-guestbook-8a2170773d42.herokuapp.com/
+- backend repository: https://github.com/katieloesch/p3-mern-guestbook-backend
+
+- group repository:
+  https://github.com/hpramanathan/project3-mernstack-app
 
 ## <a name="installation"></a> 3. Installation
 

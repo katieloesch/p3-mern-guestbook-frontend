@@ -1,7 +1,7 @@
 .contact-icons {
     padding-top: 30px;
     padding-bottom: 10px;
-    padding-left: 10px;
+    padding-left: 5px;
     display: flex;
     justify-content: flex-start;
     align-items: flex-start;
@@ -12,12 +12,30 @@
     left: 0;
     bottom: 0;
 
+    @media screen and (max-width: 1050px) {
+      bottom: 34%;
+    }
+    @media screen and (max-width: 1000px) {
+     bottom: 22%;
+    }
+    @media screen and (max-width: 780px) {
+     bottom: 12%;
+    }
+    @media screen and (max-width: 715px) {
+     bottom: 21%;
+    }
+    @media screen and (max-width: 600px) {
+     bottom: 6%;
+    }
 
-    @media screen and (max-width: 450px) {
-        top: 60%;
+    @media screen and (max-width: 415px) {
+     bottom: 2%;
     }
     @media screen and (max-width: 400px) {
-        top: 65%;
+     bottom: 0%;
+    }
+    @media screen and (max-width: 360px) {
+     bottom: 0%;
     }
 
       

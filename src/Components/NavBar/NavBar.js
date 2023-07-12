@@ -26,17 +26,17 @@ export default function NavBar(props) {
     } else {
       navigate('/users/login')
     }
+    setMenuToggle(false)
 
   }
 
   function logUserOut() {
     localStorage.removeItem("divorceJWT")
     props.setTokenInLocalStorage(false)
+    setMenuToggle(false)
+
     navigate('/users/logout')
   }
-
-
-
 
   return (<div className='nav-bar'>
             <ul className='nav-list'>
@@ -67,9 +67,9 @@ export default function NavBar(props) {
                       <ul className='mobile-nav-list'>
                       {navItems.map((item, index) => {
                         if (item.display === 'always') {
-                          return <li key={`mobile-nav-item-${index}`} className='mobile-nav-item'><Link to={item.link}>{item.name}</Link></li>
+                          return <li key={`mobile-nav-item-${index}`} className='mobile-nav-item' onClick={() => setMenuToggle(false)} ><Link to={item.link}>{item.name}</Link></li>
                         } else if (!props.tokenInLocalStorage&&item.display === 'userLoggedOut') {
-                          return <li key={`mobile-nav-${index}`} className='mobile-nav-item'><Link to={item.link}>{item.name}</Link></li>
+                          return <li key={`mobile-nav-${index}`} className='mobile-nav-item' onClick={() => setMenuToggle(false)} ><Link to={item.link}>{item.name}</Link></li>
                         } else if (props.tokenInLocalStorage&&item.name === 'Account') {
                           return <li  key={`mobile-nav-item-${index}`} className='mobile-nav-item' onClick={gotToAccount}><Link>{item.name}</Link></li>
                         } else if (props.tokenInLocalStorage&&item.name === 'Log Out') {

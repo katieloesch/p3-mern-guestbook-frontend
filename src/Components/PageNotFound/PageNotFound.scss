@@ -1,0 +1,34 @@
+.page-not-found-page {
+    width: 100%;
+    height: 100%;
+    padding-top: 8rem;
+    text-align: center;
+    font-size: 1.5rem;
+    color: var(--lightpurple);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 2rem;
+    background-color: white;
+
+    h1 {
+
+        @media screen and (max-width: 800px) {
+            padding-top: 35%;
+        }
+        @media screen and (max-width: 600px) {
+            padding-top: 25%;
+        }
+        @media screen and (max-width: 570px) {
+            padding-top: 35%;
+        }
+    }
+
+    img {
+        width: 40%;
+        border-radius: 20%;
+    }
+
+   
+
+}
